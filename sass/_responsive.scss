@@ -1,0 +1,309 @@
+// Navebar SCSS
+@media (max-width: 1200px) {
+
+    // Navbar SCSS Style
+    .navbar-default {
+        font-size: 16px;
+
+        .container {
+            width: 100%;
+        }
+
+        .navbar-nav {
+            >li {
+                >a {
+                    margin: 10px 5px 10px 15px;
+                }
+            }
+        }
+    }
+
+    // H Timeline SCSS Style
+    .h-timeline {
+        .detail {
+            padding: 20px 15px;
+
+            strong {
+                font-size: 13px;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    // Welcome Section SCSS Style
+    .welcome {
+        .text-block {
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+            line-height: 26px;
+            margin: 15px 0;
+
+            strong {
+                font-size: 24px;
+            }
+        }
+
+        .cd-headline {
+            font-size: 20px;
+            line-height: 26px;
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    // Navbar SCSS Style
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.9);
+
+        &.collapse {
+            display: none !important;
+
+            &.in {
+                display: block !important;
+            }
+        }
+    }
+
+    .navbar-header {
+        float: none;
+        margin-right: 0 !important;
+        padding: 0 15px;
+    }
+
+    .navbar-brand {
+        height: 60px;
+        padding: 5px 15px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar {
+        height: 61px;
+        min-height: 0;
+
+        .container {
+            padding: 0;
+        }
+
+        .navbar-nav {
+            float: none;
+
+            &.navbar-right {
+                float: none !important;
+                margin: 0;
+            }
+
+            >li {
+                float: none;
+
+                a {
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    // Portfolio SCSS Style
+    .portfolio {
+        li {
+            width: 50%;
+        }
+    }
+
+    // Timeline SCSS Style
+    .timeline {
+        >li {
+            padding-left: 175px;
+        }
+
+        .year {
+            height: 90px;
+            line-height: 30px;
+            top: 55px;
+            width: 130px;
+        }
+
+        .detail {
+            &:before {
+                left: -115px;
+                width: 115px;
+            }
+        }
+    }
+
+    // H Timeline SCSS Style
+    .h-timeline {
+
+        >li {
+            margin-top: 60px;
+            width: 50%;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+
+            &:nth-child(2) {
+                &:before {
+                    width: 0;
+                    border-width: 0 0 0 1px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    // Portfolio SCSS Style
+    .portfolio {
+        li {
+            float: none;
+            margin: 0 auto 25px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        figcaption {
+            padding: 25px 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    // Timeline SCSS Style
+    .timeline {
+        >li {
+            padding-left: 50px;
+
+            &:last-child {
+                .detail {
+                    &:before {
+                        border-color: $success;
+                        border-style: solid;
+                        border-width: 0 0 0 2px;
+                        height: calc(50% + 30px);
+                    }
+                }
+            }
+        }
+
+        .year {
+            height: auto;
+            line-height: 24px;
+            margin-left: -65px;
+            margin-bottom: 30px;
+            padding: 5px 15px;
+            position: relative;
+            top: 0;
+            width: 200px;
+
+            span {
+                display: inline-block;
+
+                &+span {
+                    &:before {
+                        content: "-";
+                        position: relative;
+                        margin: 0 10px 0 5px;
+
+                    }
+                }
+            }
+        }
+
+        .detail {
+            &:before {
+                border-width: 0 0 0 2px;
+                height: calc(100% + 60px);
+                top: -30px;
+                left: -35px;
+                width: 35px;
+            }
+
+            &:after {
+                content: "";
+                border-color: $success;
+                border-style: solid;
+                border-width: 2px 0 0 0;
+                position: absolute;
+                top: 50%;
+                left: -35px;
+                width: 35px;
+            }
+        }
+    }
+
+    // H Timeline SCSS Style
+    .h-timeline {
+
+        >li {
+            float: none;
+            margin: 0;
+            max-width: 450px;
+            padding-left: 75px;
+            width: 100%;
+
+            &:before {
+                border-width: 0 0 0 1px;
+                height: 100%;
+                left: 35px;
+                top: 15px;
+                bottom: 0;
+                width: 0;
+            }
+
+            &:last-child {
+                &:before {
+                    height: 50%;
+                }
+            }
+        }
+
+        .year {
+            border-radius: 0;
+            line-height: 24px;
+            margin: 0 0 30px -75px;
+            max-width: 200px;
+            padding: 5px 15px;
+
+            &:before {
+                top: 100px;
+                left: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .about {
+        .interest {
+            li {
+                min-height: 120px;
+                width: 50%;
+
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

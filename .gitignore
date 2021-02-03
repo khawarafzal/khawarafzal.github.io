@@ -1,0 +1,6 @@
+# ignore all logs
+
+# **/logs
+*.log
+*.sass-cache
+*.sass-cache/*

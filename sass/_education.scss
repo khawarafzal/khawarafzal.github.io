@@ -1,0 +1,10 @@
+.education {
+    background: darken($white, 5);
+
+    .certification {
+        strong {
+            color: $greyDark;
+            font-weight: 500;
+        }
+    }
+}

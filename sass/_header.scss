@@ -1,0 +1,123 @@
+.welcome {
+    background-image: url("../images/welcome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .container {
+        height: 100vh;
+        z-index: 100;
+    }
+
+    .text-block {
+        // background: black;
+        color: $grey;
+        height: 420px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: -250px auto 0;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        max-width: 60px;
+    }
+
+    h1 {
+        color: $white;
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 4px;
+        margin: 25px 0;
+        text-transform: uppercase;
+
+        strong {
+            color: $success;
+            display: block;
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 15px;
+            text-transform: none;
+        }
+    }
+
+    .cd-headline {
+        color: $white;
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        margin: 15px 0 25px;
+        position: relative;
+
+        &.clip {
+            .cd-words-wrapper {
+                &:after {
+                    background-color: $success;
+                }
+            }
+
+            span {
+                padding: 5px 0;
+            }
+        }
+    }
+
+    p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+.social {
+    margin-top: 30px;
+
+    .git {
+        &:hover {
+            .cta {
+                color: #ec4d28;
+            }
+        }
+    }
+
+    .skype {
+        &:hover {
+            .cta {
+                color: #27a3e3;
+            }
+        }
+    }
+
+    .linkedin {
+        &:hover {
+            .cta {
+                color: #0076b3;
+            }
+        }
+    }
+
+    .facebook {
+        &:hover {
+            .cta {
+                color: #4064ad;
+            }
+        }
+    }
+}

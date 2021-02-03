@@ -1,0 +1,84 @@
+.navbar {
+    border-radius: 0;
+    border-width: 0 0 1px 0;
+    display: none;
+    margin-bottom: 0;
+    min-height: 81px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -85px;
+    transition: all ease-in-out 0.5s;
+    z-index: 999;
+}
+
+.navbar-default {
+    background-color: darken($white, 2);
+    border-color: #e2e2e2;
+    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    .navbar-toggle {
+        border-color: $success;
+        border-width: 2px;
+        border-radius: 5px;
+        margin-top: 9px;
+        margin-right: 0;
+        padding: 7px 10px;
+
+        &:hover,
+        &:focus {
+            background: #252525;
+            border-color: $success;
+        }
+
+        .icon-bar {
+            background-color: $success;
+            height: 4px;
+            width: 25px;
+
+            +.icon-bar {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        >li {
+            >a {
+                color: $greyDark;
+                line-height: 30px;
+                margin: 10px 0 10px 25px;
+                text-align: center;
+
+                &:hover,
+                &:focus {
+                    color: $success;
+                }
+            }
+        }
+
+        >.active {
+            a {
+                background: none;
+                color: $success;
+
+                &:hover,
+                &:focus {
+                    background: none;
+                    color: $success;
+                }
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    height: 80px;
+
+    >img {
+        max-width: 50px;
+    }
+}
