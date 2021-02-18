@@ -6,6 +6,11 @@
     height: 100vh;
     min-height: 500px;
     position: relative;
+    @media (max-width: 1024px) and (min-width: 768px) {
+        background-image: none;
+        height: 520px;
+        background-size: auto 520px;
+    }
 
     &:before {
         content: "";
@@ -40,6 +45,7 @@
         min-height: 103px;
         @media (max-width: 767px) {
             max-width: 250px;
+            min-height: auto;
         }
     }
 
@@ -211,3 +217,106 @@
 		opacity: 1;
 	}
 }
+
+
+
+
+.ani-icon{
+    // background: radial-gradient(#fff,#EFEFEF,#DFDFDF,#CFCFCF,#AFAFAF);
+    position:absolute ;
+    overflow: hidden;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+.ani-icon div{
+position:absolute ;
+display:block ;
+}
+.ani-icon div:nth-child(1){
+    left:2%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-2s;
+
+}
+.ani-icon div:nth-child(2){
+    left:95%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-4s;
+}
+.ani-icon div:nth-child(3){
+    left:7%; 
+    animation:fall 20s linear infinite ;
+    animation-delay:-7s;
+    
+}
+.ani-icon div:nth-child(4){
+    left:70%; 
+   animation:fall 18s linear infinite ; 
+   animation-delay:-5s;
+}
+.ani-icon div:nth-child(5){
+    left:85%; 
+    animation:fall 14s linear infinite ;
+    animation-delay:-5s;
+}
+.ani-icon div:nth-child(6){
+    left:15%; 
+    animation:fall 16s linear infinite ;
+    animation-delay:-10s;
+}
+.ani-icon div:nth-child(7){
+    left:90%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-4s;
+}
+.ani-icon div:nth-child(8){
+    left:10%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-5s;
+}
+.ani-icon div:nth-child(9){
+    left:20%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-7s;
+}
+.ani-icon div:nth-child(10){
+    left:95%;
+    animation:fall 15s linear infinite ;
+    animation-delay:-8s;
+}
+.ani-icon div:nth-child(11){
+    left:30%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-5s;
+}
+
+@keyframes fall{
+    0%{
+        opacity:1;
+        top:-10%;
+        transform:translateX (20px) rotate(0deg);
+    }
+    20%{
+        opacity:0.8;
+        transform:translateX (-20px) rotate(45deg);
+    }
+    40%{
+
+        transform:translateX (-20px) rotate(90deg);
+    }
+    60%{
+        
+       transform:translateX (-20px) rotate(135deg); 
+    }
+    80%{
+    
+        transform:translateX (-20px) rotate(180deg);
+    }
+    100%{
+        
+        top:110%;
+        transform:translateX (-20px) rotate(225deg);
+    }
+    }

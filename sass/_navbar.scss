@@ -17,7 +17,7 @@
     border-color: #e2e2e2;
     box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
     font-family: 'Dosis', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 
     .navbar-toggle {
@@ -48,14 +48,17 @@
     .navbar-nav {
         >li {
             >a {
-                color: $greyDark;
+                color: #666666;
                 line-height: 30px;
-                margin: 10px 0 10px 25px;
+                margin: 0 0 0 40px;
                 text-align: center;
+                padding: 23px 0;
+                border-bottom: 4px solid transparent;
 
                 &:hover,
                 &:focus {
                     color: $success;
+                    border-color: $success;
                 }
             }
         }
@@ -64,11 +67,13 @@
             a {
                 background: none;
                 color: $success;
+                border-color: $success;
 
                 &:hover,
                 &:focus {
                     background: none;
                     color: $success;
+                    border-color: $success;
                 }
             }
         }

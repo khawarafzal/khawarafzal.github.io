@@ -6,7 +6,7 @@ Version:    v1.0
 Copyright 2021, khawarafzal.
 Free to use and abuse under the MIT license.
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Dosis:300,400,500,600,700|Raleway:300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 html,
 body {
   scroll-behavior: smooth; }
@@ -92,6 +92,11 @@ section {
   height: 100vh;
   min-height: 500px;
   position: relative; }
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .welcome {
+      background-image: none;
+      height: 520px;
+      background-size: auto 520px; } }
   .welcome:before {
     content: "";
     background: rgba(255, 255, 255, 0.8);
@@ -119,7 +124,8 @@ section {
     min-height: 103px; }
     @media (max-width: 767px) {
       .welcome .logo {
-        max-width: 250px; } }
+        max-width: 250px;
+        min-height: auto; } }
   .welcome h1 {
     color: #ffffff;
     font-size: 26px;
@@ -229,6 +235,90 @@ section {
     opacity: 0; }
   100% {
     opacity: 1; } }
+.ani-icon {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.ani-icon div {
+  position: absolute;
+  display: block; }
+
+.ani-icon div:nth-child(1) {
+  left: 2%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s; }
+
+.ani-icon div:nth-child(2) {
+  left: 95%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s; }
+
+.ani-icon div:nth-child(3) {
+  left: 7%;
+  animation: fall 20s linear infinite;
+  animation-delay: -7s; }
+
+.ani-icon div:nth-child(4) {
+  left: 70%;
+  animation: fall 18s linear infinite;
+  animation-delay: -5s; }
+
+.ani-icon div:nth-child(5) {
+  left: 85%;
+  animation: fall 14s linear infinite;
+  animation-delay: -5s; }
+
+.ani-icon div:nth-child(6) {
+  left: 15%;
+  animation: fall 16s linear infinite;
+  animation-delay: -10s; }
+
+.ani-icon div:nth-child(7) {
+  left: 90%;
+  animation: fall 15s linear infinite;
+  animation-delay: -4s; }
+
+.ani-icon div:nth-child(8) {
+  left: 10%;
+  animation: fall 15s linear infinite;
+  animation-delay: -5s; }
+
+.ani-icon div:nth-child(9) {
+  left: 20%;
+  animation: fall 15s linear infinite;
+  animation-delay: -7s; }
+
+.ani-icon div:nth-child(10) {
+  left: 95%;
+  animation: fall 15s linear infinite;
+  animation-delay: -8s; }
+
+.ani-icon div:nth-child(11) {
+  left: 30%;
+  animation: fall 15s linear infinite;
+  animation-delay: -5s; }
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: translateX 20px rotate(0deg); }
+  20% {
+    opacity: 0.8;
+    transform: translateX -20px rotate(45deg); }
+  40% {
+    transform: translateX -20px rotate(90deg); }
+  60% {
+    transform: translateX -20px rotate(135deg); }
+  80% {
+    transform: translateX -20px rotate(180deg); }
+  100% {
+    top: 110%;
+    transform: translateX -20px rotate(225deg); } }
 .navbar {
   border-radius: 0;
   border-width: 0 0 1px 0;
@@ -247,7 +337,7 @@ section {
   border-color: #e2e2e2;
   box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
   font-family: 'Dosis', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600; }
   .navbar-default .navbar-toggle {
     border-color: #db0a88;
@@ -268,16 +358,21 @@ section {
   .navbar-default .navbar-nav > li > a {
     color: #666666;
     line-height: 30px;
-    margin: 10px 0 10px 25px;
-    text-align: center; }
+    margin: 0 0 0 40px;
+    text-align: center;
+    padding: 23px 0;
+    border-bottom: 4px solid transparent; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-      color: #db0a88; }
+      color: #db0a88;
+      border-color: #db0a88; }
   .navbar-default .navbar-nav > .active a {
     background: none;
-    color: #db0a88; }
+    color: #db0a88;
+    border-color: #db0a88; }
     .navbar-default .navbar-nav > .active a:hover, .navbar-default .navbar-nav > .active a:focus {
       background: none;
-      color: #db0a88; }
+      color: #db0a88;
+      border-color: #db0a88; }
 
 .navbar-brand {
   height: 80px; }
@@ -635,9 +730,7 @@ section {
       -moz-transition: 0.4s ease-in-out; }
 
 .skills {
-  background-image: url(../images/bg-1.png);
-  background-size: cover;
-  background-attachment: fixed; }
+  position: relative; }
 
 .history {
   background-color: #f2f2f2; }
@@ -909,7 +1002,7 @@ footer {
     .welcome h1 strong {
       font-size: 24px; }
   .welcome .cd-headline {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 26px;
     margin: 25px 0; }
   .welcome p {
