@@ -40,9 +40,9 @@ a {
   -moz-transition: 0.4s ease-in-out; }
 
 .cta {
-  color: #470e66; }
+  color: #db0a88; }
   .cta:hover, .cta:focus {
-    color: #280839;
+    color: #aa086a;
     text-decoration: none; }
 
 .section-title {
@@ -102,7 +102,7 @@ section {
     right: 0;
     z-index: 0; }
   .welcome .container {
-    height: 100vh;
+    height: 100%;
     z-index: 100; }
   .welcome .text-block {
     height: 420px;
@@ -110,12 +110,13 @@ section {
     top: 50%;
     left: 0;
     right: 0;
-    margin: -250px auto 0;
+    margin: -210px auto 0;
     max-width: 840px;
     text-align: center; }
   .welcome .logo {
     margin-bottom: 10px;
-    max-width: 380px; }
+    max-width: 380px;
+    min-height: 103px; }
     @media (max-width: 767px) {
       .welcome .logo {
         max-width: 250px; } }
@@ -159,6 +160,18 @@ section {
   .social .facebook:hover .cta {
     color: #4064ad; }
 
+.load-animation {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #F6F6F6;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 800px 104px;
+  height: 103px;
+  position: relative; }
+
 .lef-to-rig {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -183,6 +196,16 @@ section {
   -webkit-animation-name: fadein;
   animation-name: fadein; }
 
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0; }
+  100% {
+    background-position: 468px 0; } }
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0; }
+  100% {
+    background-position: 468px 0; } }
 @keyframes rightoleft {
   0% {
     opacity: 0;
@@ -292,6 +315,7 @@ section {
 .social .cta,
 .portfolio .cta {
   border: 1px solid #B1B1B1;
+  border-radius: 50%;
   color: #B1B1B1;
   cursor: pointer;
   display: inline-block;
@@ -651,7 +675,7 @@ section {
       top: -50%;
       bottom: -50%; }
     .portfolio figure:before {
-      background: rgba(56, 222, 138, 0.92);
+      background: rgba(219, 10, 136, 0.92);
       content: "";
       position: absolute;
       top: 50%;
@@ -757,8 +781,7 @@ section {
         box-shadow: 0 0 0 3px #f86cc1; }
 
 .testimonial blockquote {
-  border: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  border: 3px solid #db0a88;
   font-size: 14px;
   line-height: 22px;
   margin: 0;

@@ -37,11 +37,11 @@ a {
 }
 
 .cta {
-    color: $primary;
+    color: $success;
 
     &:hover,
     &:focus {
-        color: darken($primary, 10);
+        color: darken($success, 10);
         text-decoration: none;
     }
 }
