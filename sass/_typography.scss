@@ -63,7 +63,7 @@ a {
             position: absolute;
             left: 0;
             bottom: 0;
-            height: 2px;
+            height: 4px;
             width: 40px;
         }
     }
@@ -75,7 +75,7 @@ section {
 
 .panel {
     border: 0;
-    border-radius: 0;
+    border-radius: $site-radius;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
     &:hover {

@@ -61,7 +61,7 @@ a {
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 2px;
+      height: 4px;
       width: 40px; }
 
 section {
@@ -69,7 +69,7 @@ section {
 
 .panel {
   border: 0;
-  border-radius: 0;
+  border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
   .panel:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25); }
@@ -85,18 +85,21 @@ section {
   display: table; }
 
 .welcome {
-  background-image: url("../images/welcome.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   height: 100vh;
   min-height: 500px;
   position: relative; }
+  @media (min-width: 1024px) {
+    .welcome {
+      background-image: url("../images/welcome.jpg"); } }
   @media (max-width: 1024px) and (min-width: 768px) {
     .welcome {
-      background-image: none;
-      height: 520px;
-      background-size: auto 520px; } }
+      background-image: url("../images/welcome-tb.jpg"); } }
+  @media (max-width: 767px) {
+    .welcome {
+      background-image: url("../images/welcome-mb.jpg"); } }
   .welcome:before {
     content: "";
     background: rgba(255, 255, 255, 0.8);
@@ -110,12 +113,12 @@ section {
     height: 100%;
     z-index: 100; }
   .welcome .text-block {
-    height: 420px;
+    height: 474px;
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
-    margin: -210px auto 0;
+    margin: -237px auto 0;
     max-width: 840px;
     text-align: center; }
   .welcome .logo {
@@ -140,6 +143,11 @@ section {
       font-weight: 600;
       margin-top: 15px;
       text-transform: none; }
+  .welcome h3 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #db0a87;
+    font-weight: bold; }
   .welcome .cd-headline {
     color: #470e66;
     font-size: 26px;
@@ -236,6 +244,7 @@ section {
   letter-spacing: 1px;
   line-height: 24px;
   margin: 10px;
+  border-radius: 30px;
   padding: 10px 25px; }
 
 .btn-primary {
@@ -472,7 +481,8 @@ section {
   .h-timeline .detail {
     background: #ffffff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px; }
+    padding: 20px;
+    border-radius: 10px; }
     .h-timeline .detail h4 {
       font-weight: 500; }
     .h-timeline .detail strong {
@@ -491,7 +501,8 @@ section {
     height: 150px;
     margin: -80px auto 0;
     overflow: hidden;
-    width: 150px; }
+    width: 150px;
+    border: 4px solid white; }
     .about .dp img {
       max-width: 100%; }
   .about .panel {
@@ -695,6 +706,16 @@ section {
       background-color: #ffffff;
       color: #db0a88; }
 
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 750px; } }
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  .modal-dialog {
+    width: 1170px; } }
+
 .education {
   background: #f2f2f2; }
   .education .certification strong {
@@ -727,7 +748,8 @@ section {
   margin: 0;
   padding: 20px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  border-radius: 10px; }
   .testimonial blockquote .dp {
     border-radius: 50%;
     box-shadow: 0 0 0 3px #e4e4e4;
@@ -1144,3 +1166,18 @@ footer {
   100% {
     top: 110%;
     transform: translateX -20px rotate(225deg); } }
+.floating-style {
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite; }
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px); }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px); }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px); } }
