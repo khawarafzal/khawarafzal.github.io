@@ -30,8 +30,11 @@
 
         &:hover,
         &:focus {
-            background: #252525;
+            background: inherit;
             border-color: $success;
+        }
+        &[aria-expanded="true"] {
+            background: $primary;
         }
 
         .icon-bar {
