@@ -1,4 +1,8 @@
-.projects {}
+.projects {
+    .btn-success {
+        margin: 20px 0 0;
+    }
+}
 
 .portfolio {
     @extend .clearfix;

@@ -595,6 +595,9 @@ section {
 .history {
   background-color: #f2f2f2; }
 
+.projects .btn-success {
+  margin: 20px 0 0; }
+
 .portfolio {
   list-style: none;
   margin: 0 -10px 10px;
