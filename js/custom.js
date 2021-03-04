@@ -47,3 +47,8 @@ $(document).ready(function () {
         }
     })
 });
+
+// OWL Carousel for testimonial
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});

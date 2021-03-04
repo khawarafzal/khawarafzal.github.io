@@ -1,4 +1,8 @@
-.projects {}
+.projects {
+    .btn-success {
+        margin: 20px 0 0;
+    }
+}
 
 .portfolio {
     @extend .clearfix;
@@ -75,7 +79,7 @@
     }
 
     .media {
-        min-height: 200px;
+        height: 200px;
         overflow: hidden;
 
         >img {
@@ -152,5 +156,32 @@
             background-color: $white;
             color: $success;
         }
+    }
+}
+
+
+//Modal styling
+.modal-dialog {
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+    .modal-header {
+        padding: 0;
+        border: none;
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            z-index: 50;
+        }
+    }
+    .modal-body {
+        padding-top: 50px;
     }
 }

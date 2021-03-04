@@ -62,7 +62,7 @@
 
     // Navbar SCSS Style
     .navbar-collapse {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(255, 255, 255, 0.95);
 
         &.collapse {
             display: none !important;
@@ -106,10 +106,15 @@
 
             >li {
                 float: none;
+                padding: 0 15px;
+                text-align: center;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
 
                 a {
                     margin: 0;
                     text-align: left;
+                    padding: 10px 0;
+                    display: inline-block;
                 }
             }
         }
